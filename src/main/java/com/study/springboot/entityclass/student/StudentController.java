@@ -44,5 +44,11 @@ public class StudentController {
         return new BaseResponse(true, "获取成功", "test");
     }
 
+    @ApiOperation(value = "获取所有", notes = "获取所有")
+    @PostMapping(value = "/test1")
+    public BaseResponse test1() {
+        List<Student> list = this.service.getAll();
+        return new BaseResponse(true, "获取成功", "test");
+    }
 
 }
