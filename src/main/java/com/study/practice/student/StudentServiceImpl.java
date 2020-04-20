@@ -1,4 +1,4 @@
-package com.study.practice.springboot.entityclass.student;
+package com.study.practice.student;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

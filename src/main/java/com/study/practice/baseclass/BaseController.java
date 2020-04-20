@@ -1,6 +1,4 @@
-package com.study.springboot.baseclass;
-
-import org.springframework.web.bind.annotation.ModelAttribute;
+package com.study.practice.baseclass;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

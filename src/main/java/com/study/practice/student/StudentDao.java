@@ -1,6 +1,5 @@
-package com.study.practice.springboot.entityclass.student;
+package com.study.practice.student;;
 
-import  com.study.practice.springboot.entityclass.student.Student;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

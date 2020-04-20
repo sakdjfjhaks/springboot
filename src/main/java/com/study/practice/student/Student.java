@@ -1,4 +1,4 @@
-package com.study.practice.springboot.entityclass.student;
+package com.study.practice.student;
 
 
 import io.swagger.annotations.ApiModel;

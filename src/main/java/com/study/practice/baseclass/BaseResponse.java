@@ -1,4 +1,4 @@
-package com.study.springboot.baseclass;
+package com.study.practice.baseclass;
 
 import io.swagger.annotations.ApiModelProperty;
 

@@ -1,7 +1,6 @@
-package com.study.practice.springboot.entityclass.student;
+package com.study.practice.student;
 
 import java.util.List;
-import com.study.practice.springboot.entityclass.student.Student;
 
 /**
 * (Student)表服务接口
