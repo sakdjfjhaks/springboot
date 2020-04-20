@@ -1,7 +1,9 @@
 package com.study.springboot.baseclass;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModelProperty;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BaseResponse {
     @ApiModelProperty(value = "返回状态", name = "result", example = "true")
     private Boolean result;

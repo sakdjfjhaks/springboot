@@ -42,7 +42,7 @@
             student_name,
             student_school
         from student
-        order by student_id desc
+        order by student_id asc
     </select>
     <!--添加-->
     <insert id="add" parameterType="com.study.springboot.entityclass.student.Student">

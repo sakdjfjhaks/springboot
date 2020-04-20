@@ -21,6 +21,7 @@ public interface StudentDao {
  */
  List<Student> pages(Student student);
 
+
   /**
   * 查询所有数据
   *

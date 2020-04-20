@@ -1,5 +1,7 @@
 package com.study.springboot.entityclass.student;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.study.springboot.baseclass.BaseResponse;
 import com.study.springboot.entityclass.student.Student;
 import com.study.springboot.entityclass.student.StudentService;
@@ -29,26 +31,18 @@ public class StudentController {
     @Resource
     private StudentService service;
 
-
+    @ApiOperation(value = "分页", notes = "分页查询")
+    @PostMapping(value = "/pages")
+    public BaseResponse pages(@RequestBody Student student) {
+        PageHelper.startPage(student.getStart(), student.getLength());
+        List<Student> list = service.pages(student);
+        return new BaseResponse(true, "获取成功", list, ((Page) list).getTotal());
+    }
     @ApiOperation(value = "获取所有", notes = "获取所有")
     @PostMapping(value = "/getAll")
     public BaseResponse getAll() {
         List<Student> list = this.service.getAll();
         return new BaseResponse(true, "获取成功", list);
-    }
-
-    @ApiOperation(value = "获取所有", notes = "获取所有")
-    @PostMapping(value = "/test")
-    public BaseResponse test() {
-        List<Student> list = this.service.getAll();
-        return new BaseResponse(true, "获取成功", "test");
-    }
-
-    @ApiOperation(value = "获取所有", notes = "获取所有")
-    @PostMapping(value = "/test1")
-    public BaseResponse test1() {
-        List<Student> list = this.service.getAll();
-        return new BaseResponse(true, "获取成功", "test");
     }
 
 }

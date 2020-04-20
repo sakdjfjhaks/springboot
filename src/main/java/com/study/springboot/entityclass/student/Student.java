@@ -1,6 +1,7 @@
 package com.study.springboot.entityclass.student;
 
 
+import com.study.springboot.baseclass.BaseModel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,7 +15,7 @@ import java.util.Date;
 */
 @ApiModel(description = "")
 @Data
-public class Student  {
+public class Student extends BaseModel {
         @ApiModelProperty(value = "", name = "studentId", example = "")
         private Integer studentId;
         @ApiModelProperty(value = "", name = "studentPhone", example = "")
