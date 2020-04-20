@@ -1,8 +1,9 @@
-package com.study.practice.springboot.entityclass.student;
+package com.study.springboot.student;
 
 import com.study.practice.springboot.entityclass.student.Student;
 import com.study.practice.springboot.entityclass.student.StudentService;
 
+import com.study.springboot.baseclass.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
@@ -31,14 +32,14 @@ public class StudentController {
 
     @ApiOperation(value = "获取所有", notes = "获取所有")
     @PostMapping(value = "/getAll")
-    public List<Student> getAll() {
+    public BaseResponse getAll() {
         List<Student> list = this.service.getAll();
-        return list;
+        return new BaseResponse(true,"获取成功",list);
     }
     @ApiOperation(value = "测试", notes = "测试")
     @PostMapping(value = "/test")
-    public String test() {
-        return "list";
+    public BaseResponse test() {
+        return new BaseResponse(true,"获取成功","test");
     }
 
 }
