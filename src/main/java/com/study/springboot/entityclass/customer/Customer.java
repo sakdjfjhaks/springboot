@@ -1,6 +1,8 @@
 package com.study.springboot.entityclass.customer;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.study.springboot.baseclass.BaseModel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,7 +16,7 @@ import java.util.Date;
 */
 @ApiModel(description = "")
 @Data
-public class Customer  {
+public class Customer  extends BaseModel {
         @ApiModelProperty(value = "", name = "customerId", example = "")
         private Integer customerId;
         @ApiModelProperty(value = "", name = "customerName", example = "")
@@ -26,5 +28,5 @@ public class Customer  {
         @ApiModelProperty(value = "", name = "password", example = "")
         private String password;
         @ApiModelProperty(value = "", name = "createdTime", example = "")
-        private Integer createdTime;
+        private Date createdTime;
 }

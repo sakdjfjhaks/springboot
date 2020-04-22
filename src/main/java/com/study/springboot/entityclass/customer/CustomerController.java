@@ -32,7 +32,7 @@ public class CustomerController {
     @ApiOperation(value = "分页", notes = "分页查询")
     @PostMapping(value = "/pages")
     public BaseResponse pages(@RequestBody Customer customer) {
-        PageHelper.startPage(customer .getStart(), customer .getLength());
+        PageHelper.startPage(customer.getStart(), customer.getLength());
         List<Customer> list = service.pages(customer);
         return new BaseResponse(true, "获取成功", list, ((Page) list).getTotal());
     }

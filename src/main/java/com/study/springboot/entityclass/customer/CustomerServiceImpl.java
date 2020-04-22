@@ -56,7 +56,7 @@ public class CustomerServiceImpl implements CustomerService{
     * @return 实例对象
     */
     @Override
-    public Customer getById(Long customerId){
+    public Customer getById(Integer customerId){
         return this.dao.getById(customerId);
     }
 
@@ -80,7 +80,7 @@ public class CustomerServiceImpl implements CustomerService{
     * @return 是否成功
     */
     @Override
-    public boolean deleteById(Long customerId){
+    public boolean deleteById(Integer customerId){
         return this.dao.deleteById(customerId)>0;
     }
 

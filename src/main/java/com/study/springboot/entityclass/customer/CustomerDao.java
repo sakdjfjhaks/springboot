@@ -42,7 +42,7 @@ public interface CustomerDao {
    * @param customerId 主键
    * @return 实例对象
    */
-   Customer getById(Long customerId);
+   Customer getById(Integer customerId);
 
    /**
    * 修改数据
@@ -58,5 +58,5 @@ public interface CustomerDao {
    * @param customerId 主键
    * @return 影响行数
    */
-   int deleteById(Long customerId);
+   int deleteById(Integer customerId);
 }

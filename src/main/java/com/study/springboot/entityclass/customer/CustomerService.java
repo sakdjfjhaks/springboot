@@ -30,7 +30,6 @@ public interface CustomerService {
     * 新增数据
     *
     * @param customer 实例对象
-    * @param student    操作人
     * @return 实例对象
     */
     Customer add(Customer customer);
@@ -41,14 +40,13 @@ public interface CustomerService {
     * @param customerId 主键
     * @return 实例对象
     */
-    Customer getById(Long customerId);
+    Customer getById(Integer customerId);
 
 
     /**
     * 修改数据
     *
     * @param customer 实例对象
-    * @param student    操作人
     * @return 实例对象
     */
     Customer update(Customer customer);
@@ -59,6 +57,6 @@ public interface CustomerService {
     * @param customerId 主键
     * @return 是否成功
     */
-    boolean deleteById(Long customerId);
+    boolean deleteById(Integer customerId);
 
 }

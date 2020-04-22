@@ -7,7 +7,7 @@
         <result column="customer_phone" jdbcType="INTEGER" property="customerPhone"/>
         <result column="salt" jdbcType="VARCHAR" property="salt"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
-        <result column="created_time" jdbcType="INTEGER" property="createdTime"/>
+        <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
     </resultMap>
     <!--获取全部-->
     <select id="getAll" resultMap="BaseResultMap">
@@ -47,7 +47,7 @@
                     #{customerPhone,jdbcType=INTEGER},
                     #{salt,jdbcType=VARCHAR},
                     #{password,jdbcType=VARCHAR},
-                    #{createdTime,jdbcType=INTEGER}
+                    #{createdTime,jdbcType=TIMESTAMP}
         )
     </insert>
     <!--修改-->
@@ -67,7 +67,7 @@
               password = #{password,jdbcType=VARCHAR},
            </if>
            <if test="createdTime != null ">
-              created_time = #{createdTime,jdbcType=INTEGER}
+              created_time = #{createdTime,jdbcType=TIMESTAMP}
            </if>
         </set>
         where customer_id= #{customerId,jdbcType=INTEGER} 
