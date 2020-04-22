@@ -55,7 +55,7 @@ public class CustomerController {
     @ApiOperation(value = "详情", notes = "详情")
     @PostMapping("/detail")
     public BaseResponse detail(@RequestBody Customer customer) {
-        Customer newCustomer = service.getById(customer.getcustomerId());
+        Customer newCustomer = service.getById(customer.getCustomerId());
         if (newCustomer != null) {
             return new BaseResponse(true, "查询成功", newCustomer);
         } else {
@@ -73,7 +73,7 @@ public class CustomerController {
     @ApiOperation(value = "删除", notes = "删除")
     @PostMapping("/delete")
     public BaseResponse delete(@RequestBody Customer customer) {
-        service.deleteById(customer.getcustomerId());
+        service.deleteById(customer.getCustomerId());
         return new BaseResponse(true, "删除成功");
     }
 
