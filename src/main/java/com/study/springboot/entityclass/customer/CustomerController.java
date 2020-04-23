@@ -1,18 +1,16 @@
 package com.study.springboot.entityclass.customer;
 
 import com.github.pagehelper.Page;
-import com.study.springboot.entityclass.customer.Customer;
-import com.study.springboot.entityclass.customer.CustomerService;
-
 import com.github.pagehelper.PageHelper;
 import com.study.springboot.baseclass.BaseResponse;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import javax.annotation.Resource;
 import java.util.List;
 /**
@@ -21,7 +19,7 @@ import java.util.List;
 * @author wangkun
 * @date  2020-04-22
 */
-@Controller
+@RestController
 @RequestMapping("/customer")
 @Api(value = "", tags = "操作接口")
 public class CustomerController {

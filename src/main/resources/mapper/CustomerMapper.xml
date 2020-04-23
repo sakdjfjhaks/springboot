@@ -54,23 +54,23 @@
     <update id="update" parameterType="com.study.springboot.entityclass.customer.Customer">
         update customer
         <set>
-           <if test="customerName != null and customerName !='' ">
-              customer_name = #{customerName,jdbcType=VARCHAR},
-           </if>
-           <if test="customerPhone != null ">
-              customer_phone = #{customerPhone,jdbcType=INTEGER},
-           </if>
-           <if test="salt != null and salt !='' ">
-              salt = #{salt,jdbcType=VARCHAR},
-           </if>
-           <if test="password != null and password !='' ">
-              password = #{password,jdbcType=VARCHAR},
-           </if>
-           <if test="createdTime != null ">
-              created_time = #{createdTime,jdbcType=TIMESTAMP}
-           </if>
+            <if test="customerName != null and customerName !='' ">
+                customer_name = #{customerName,jdbcType=VARCHAR},
+            </if>
+            <if test="customerPhone != null ">
+                customer_phone = #{customerPhone,jdbcType=INTEGER},
+            </if>
+            <if test="salt != null and salt !='' ">
+                salt = #{salt,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null and password !='' ">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="createdTime != null ">
+                created_time = #{createdTime,jdbcType=TIMESTAMP}
+            </if>
         </set>
-        where customer_id= #{customerId,jdbcType=INTEGER} 
+        where customer_id= #{customerId,jdbcType=INTEGER}
     </update>
     <!--详情-->
     <select id="getById" parameterType="java.lang.Long" resultMap="BaseResultMap">
