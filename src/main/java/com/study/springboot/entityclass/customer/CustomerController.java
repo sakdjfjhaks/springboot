@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.study.springboot.baseclass.BaseResponse;
 
+import com.study.springboot.repeat.NoRepeatSubmit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,6 +38,7 @@ public class CustomerController {
 
     @ApiOperation(value = "获取所有", notes = "获取所有")
     @PostMapping(value = "/getAll")
+    @NoRepeatSubmit
     public BaseResponse getAll() {
         List<Customer> list = this.service.getAll();
         return new BaseResponse(true, "获取成功", list);
