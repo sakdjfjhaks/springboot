@@ -1,5 +1,6 @@
 package com.study.springboot.entityclass.customer;
 import com.study.springboot.baseclass.BaseException;
+import com.study.springboot.baseconstant.BaseConstantEnum;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -85,7 +86,7 @@ public class CustomerServiceImpl implements CustomerService{
         try {
             this.dao.deleteById(customerId);
         } catch (Exception e) {
-            throw new BaseException(123, "删除失败");
+            throw new BaseException(BaseConstantEnum.DELETE_FAILD.getCode(), BaseConstantEnum.DELETE_FAILD.getMessage());
         }
     }
 }
