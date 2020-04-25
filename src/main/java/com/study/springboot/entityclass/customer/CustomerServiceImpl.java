@@ -1,4 +1,5 @@
 package com.study.springboot.entityclass.customer;
+import com.study.springboot.baseclass.BaseException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -80,8 +81,11 @@ public class CustomerServiceImpl implements CustomerService{
     * @return 是否成功
     */
     @Override
-    public boolean deleteById(Integer customerId){
-        return this.dao.deleteById(customerId)>0;
+    public void deleteById(Integer customerId) {
+        try {
+            this.dao.deleteById(customerId);
+        } catch (Exception e) {
+            throw new BaseException(123, "删除失败");
+        }
     }
-
 }

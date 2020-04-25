@@ -57,6 +57,6 @@ public interface CustomerService {
     * @param customerId 主键
     * @return 是否成功
     */
-    boolean deleteById(Integer customerId);
+    void deleteById(Integer customerId);
 
 }

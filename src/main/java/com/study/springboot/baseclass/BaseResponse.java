@@ -37,6 +37,10 @@ public class BaseResponse {
         this.records=records.intValue();
     }
 
+    public BaseResponse() {
+
+    }
+
     public Boolean getResult() {
         return this.result;
     }
